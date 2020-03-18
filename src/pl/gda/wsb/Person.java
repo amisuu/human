@@ -36,13 +36,8 @@ public class Person {
         LocalDate today = LocalDate.now();
         LocalDate born = LocalDate.parse(dateOfBirth);
         //Duration duration = Duration.between(born.atStartOfDay(), today.atStartOfDay());
+
         Period period = Period.between(born, today);
-        if ((today.getYear()%4==0 && today.getYear()%100!=0) || today.getYear()%400==0)
-        {
-            System.out.println(surname + " " + period.getYears() + " years old.");
-        }
-        else {
-            System.out.println(surname + " " + period.getYears() + " years old.");
-        }
+        System.out.println(surname + " " + period.getYears() + " years old.");
     }
 }
